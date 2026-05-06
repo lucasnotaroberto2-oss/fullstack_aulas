@@ -6,3 +6,7 @@ app.use(express.static("./public"));
 var server = http.createServer(app);
 server.listen(3000);
 console.log("servidor rodando...".rainbow);
+
+app.get("/inicio", function(req,res){
+    res.redirect("index.html")
+})
